@@ -1,8 +1,9 @@
 # Opportunities Server
-
-Welcome to your new Hanami project!
-
 > ruby 2.7.3
+
+A small project made in hanami with API only, demonstrating how an API works in this framework. All front-end part has been removed.
+
+Enjoy!
 
 ## Setup
 
@@ -24,12 +25,32 @@ How to run the development server:
 % hanami server
 ```
 
-How to prepare (create and migrate) DB for `development` and `test` environments:
+## End-points
 
+### Get opportunities in blocks
+
+Route:
 ```
-% hanami db prepare
+GET /api/v1/opportunities
+```
 
-% HANAMI_ENV=test hanami db prepare
+Params:
+```
+# required
+
+copmany_id: String
+page: String
+
+# optional
+
+per_page: String # default: 5
+```
+
+### Get a single opportunity
+
+Route:
+```
+GET /api/v1/opportunities/:id
 ```
 
 Explore Hanami [guides](https://guides.hanamirb.org/), [API docs](http://docs.hanamirb.org/1.3.3/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸
