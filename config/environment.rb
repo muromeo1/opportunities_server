@@ -2,10 +2,10 @@ require 'bundler/setup'
 require 'hanami/setup'
 require 'hanami/model'
 require_relative '../lib/opportunities_server'
-require_relative '../apps/api/application'
+require_relative '../apps/api/v1/application'
 
 Hanami.configure do
-  mount Api::Application, at: '/'
+  mount Api::V1::Application, at: '/api/v1'
 
   model do
     ##
