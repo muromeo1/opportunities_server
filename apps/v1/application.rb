@@ -1,7 +1,7 @@
 require 'hanami/helpers'
 require 'hanami/assets'
 
-module Api::V1
+module V1
   class Application < Hanami::Application
     configure do
       ##
@@ -9,7 +9,6 @@ module Api::V1
       #
       default_request_format :json
       default_response_format :json
-      body_parsers :json
 
       #
       # BASIC
@@ -88,7 +87,7 @@ module Api::V1
       #
       # See: http://www.rubydoc.info/gems/rack/Rack/Session/Cookie
       #
-      # sessions :cookie, secret: ENV['API/V1_SESSIONS_SECRET']
+      # sessions :cookie, secret: ENV['V1_SESSIONS_SECRET']
 
       # Configure Rack middleware for this application
       #
@@ -110,7 +109,7 @@ module Api::V1
 
       # The layout to be used by all views
       #
-      layout :application # It will load Api::V1::Views::ApplicationLayout
+      layout :application # It will load V1::Views::ApplicationLayout
 
       # The relative path to templates
       #
@@ -248,7 +247,7 @@ module Api::V1
       # FRAMEWORKS
       #
 
-      # Configure the code that will yield each time Api::V1::Action is included
+      # Configure the code that will yield each time V1::Action is included
       # This is useful for sharing common functionality
       #
       # See: http://www.rubydoc.info/gems/hanami-controller#Configuration
@@ -257,13 +256,13 @@ module Api::V1
         # before :authenticate!    # run an authentication before callback
       end
 
-      # Configure the code that will yield each time Api::V1::View is included
+      # Configure the code that will yield each time V1::View is included
       # This is useful for sharing common functionality
       #
       # See: http://www.rubydoc.info/gems/hanami-view#Configuration
       view.prepare do
         include Hanami::Helpers
-        include Api::V1::Assets::Helpers
+        include V1::Assets::Helpers
       end
     end
 

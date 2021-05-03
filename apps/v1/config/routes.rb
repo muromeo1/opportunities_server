@@ -1,0 +1,1 @@
+resources :opportunities, only: [:index]
