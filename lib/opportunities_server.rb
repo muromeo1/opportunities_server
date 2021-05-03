@@ -1,0 +1,2 @@
+module OpportunitiesServer
+end
