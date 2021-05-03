@@ -1,8 +1,8 @@
-> ruby 2.7.3
-
 # Opportunities Server
 
 Welcome to your new Hanami project!
+
+> ruby 2.7.3
 
 ## Setup
 
