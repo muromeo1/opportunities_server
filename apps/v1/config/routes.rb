@@ -1,1 +1,1 @@
-resources :opportunities, only: [:index]
+resources :opportunities, only: [:index, :show]
