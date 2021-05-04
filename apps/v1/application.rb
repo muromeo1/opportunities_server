@@ -7,8 +7,6 @@ module V1
       default_request_format :json
       default_response_format :json
 
-      controller.format jsonapi: 'application/vnd.api+json'
-
       root __dir__
 
       load_paths << [

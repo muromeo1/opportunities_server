@@ -1,1 +1,0 @@
-OpportunityRepository.enable_pagination!
